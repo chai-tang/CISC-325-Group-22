@@ -4,11 +4,24 @@ Repository for Group 22's CISC325 High Fidelity Prototype
 
 # Current Functionality:
 
+Welcome Page (index.html)
+
+- When entering the site, users may select their account type and be redirected to the appropriate login page.
+
+Login Pages
+
+- Separate login pages for students and teachers. Currently they just redirect to the associated demo homepages, as there is no actual user login database.
+
 Teacher Homepage
 
 - Users can interact with menu buttons to navigate the site. Most of those pages don't exist yet, so expect some 404 errors.
 - Individual projects can be selected from the table. For this prototype, they will all redirect to the same demo project.
 - New projects can be added with the "New Project" button, updating the table instantly. However they will disappear upon page refresh because this prototype does not have backend database functionality.
+
+Student Homepage
+
+- Similar menu navigation features as the teacher homepage, although with slightly different options for students specifically.
+- Individual lessons can be selected from the table. For this prototype, they will all redirect to the same demo project.
 
 Student Project Page
 
@@ -19,13 +32,8 @@ Known Issues:
 
 - Block bank CSS can't fit more than four blocks at once
 - Block text isn't vertically centered
+- Most of the CSS is really ugly because josh made it
 
 # Planned Functionality:
 
 Teacher Project Page
-
-Student Homepage
-
-Login Page
-
-Register Page
