@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Projects</title>
+    <meta name="author" content="Joshua Chai-Tang"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/teacher-home.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="site-title"> 
+            Block by Block 
+            <img id="logo" src="media/blocklogo.png" alt="Colourful block logo"/>
+        </div>
+        
+        <div class="subtitle">New Teaching Tool</div>
+
+        <nav>
+            <ul>
+                <li><a href="teacher-home.html">Home</a></li>
+                <li><a href="pagenotfound.html">Classes</a></li>
+                <li><a href="pagenotfound.html">Account</a></li>
+                <li><a href="pagenotfound.html">Help</a></li>
+                <li><a href="login.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <h1>Projects</h1>
+        <table id="projects">
+            <thead>
+                <tr class="table-header">
+                    <th>Subject:</th>
+                    <th>Grade:</th>
+                    <th>Name:</th>
+                    <th>Date Created:</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Math</td>
+                    <td>1</td>
+                    <td>Time</td>
+                    <td>2021-03-07</td>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>1</td>
+                    <td>Money</td>
+                    <td>2021-03-07</td>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>1</td>
+                    <td>Arithmetic</td>
+                    <td>2021-02-21</td>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>4</td>
+                    <td>Probability</td>
+                    <td>2021-01-13</td>
+                </tr>
+                <tr>
+                    <td>Art</td>
+                    <td>1</td>
+                    <td>Colours</td>
+                    <td>2021-12-31</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>9</td>
+                    <td>Chemical Nomenclature</td>
+                    <td>2021-12-02</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="new-project">New Project</button>
+        <form id="project-form" name="project-form">
+            <div><label>Subject </label><input type="text" name="Subject" id="Subject"></input></div><br/>
+            <div><label>Grade </label><input type="text" name="Grade" id="Grade"></input></div><br/>
+            <div><label>Name </label><input type="text" name="Name" id="Name"></input></div><br/>
+            <button type="button" class="create">Create Project</button>
+            <button type="button" class="cancel">Cancel</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

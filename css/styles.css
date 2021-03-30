@@ -1,0 +1,288 @@
+/*
+
+I am so fucking sorry to anyone that tries to read this
+
+General CSS
+*/
+
+body {
+	margin: 0px;
+	font-size: 1rem;
+	font-family: Helvetica, sans-serif;
+}
+
+body .main {
+	margin: 16px;
+}
+
+h1 {
+	font-size: 2rem;
+	margin: 0px;
+	padding: 8px 0px 8px 0px;
+	font-weight: normal;
+}
+
+/* 
+Header CSS
+*/
+
+header {
+	margin-top: 16px;
+}
+
+header .site-title {
+	font-size: 3rem;
+	padding: 0px 16px 0px 16px;
+}
+
+header .subtitle {
+	font-size: 1rem;
+	padding: 4px 16px 8px 16px;
+}
+
+header nav {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	font-size: 1rem;
+}
+
+header nav ul {
+	margin: 0px;
+	padding: 8px 16px 8px 16px;
+}
+
+header nav ul li {
+	display: inline-block;
+	padding: 0px 16px 0px 0px;
+	width: 150px;
+}
+
+header nav ul li a {
+	display: block;
+	background-color: rgb(108, 201, 231);
+	padding: 16px;
+	font-size: 2rem;
+	text-decoration: none;
+	border-radius: 4px;
+	text-align: center;
+	color: black;
+}
+
+header nav ul li a:hover {
+	background-color: rgb(84, 152, 175);
+}
+
+header #logo {
+	display: inline;
+	height: 40px;
+	width: 40px;
+	padding: 0px 16px 0px 16px;
+}
+
+/*
+Teacher Homepage Content CSS
+*/
+
+#projects {
+	width: 100%;
+	border-collapse: collapse;
+	margin-left: -16px;
+}
+
+th {
+	width: 25%;
+	padding: 8px 0px 8px 16px;
+	text-align: left;
+}
+
+tr {
+	border-top: 1px solid rgb(212, 212, 212);
+	border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+tr:nth-child(even) {
+	background: #ccc;
+}
+tr:nth-child(odd) {
+	background: #fff;
+}
+tr:not(.table-header):hover {
+	background: lightblue;
+}
+
+.table-header {
+	border: none;
+}
+
+td {
+	padding: 4px 0px 4px 16px;
+	text-decoration: none;
+	color: black;
+}
+
+#new-project {
+	margin: 16px 0px 16px 0px;
+	padding: 8px;
+	background-color: rgb(73, 238, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+
+form {
+	padding: 16px;
+	background-color: #ccc;
+	border-radius: 4px;
+	width: 18%;
+}
+
+#project-form {
+	display: none;
+}
+
+#project-form div {
+	padding: 4px;
+	width: 100%;
+	display: block;
+}
+
+.create {
+	padding: 8px;
+	background-color: rgb(73, 238, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+	margin-right: 32px;
+}
+.cancel {
+	padding: 8px;
+	background-color: rgb(238, 67, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+
+/* Student Project Page CSS */
+
+.student-block-header {
+	display: flex;
+	width: 100%;
+	border: 3px solid black;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.in {
+	flex-basis: 75%;
+	flex-grow: 3;
+	border-right: 3px solid black;
+}
+
+.out {
+	flex-basis: 25%;
+	flex-grow: 1;
+}
+
+.in,
+.out {
+	display: inline-block;
+	font-size: 2rem;
+	padding: 4px;
+}
+
+.block-container h2 {
+	margin: 0;
+	font-weight: normal;
+}
+
+.block-container {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border: 3px solid black;
+	border-top: none;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+}
+
+.block-container h2 {
+	padding: 4px;
+}
+#input-block-1,
+#operator-block,
+#input-block-2 {
+	flex-basis: calc(25% - 2px);
+	display: inline-block;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	height: calc(20vw);
+}
+
+#output-block {
+	flex-basis: calc(25% + 3px);
+	border-bottom: 1px solid black;
+}
+
+#input-block-1 h2 {
+	background-color: #2a92bf;
+	border-bottom: 1px solid black;
+}
+
+#operator-block h2 {
+	background-color: #fb4a44;
+	border-bottom: 1px solid black;
+}
+
+#input-block-2 h2 {
+	background-color: #2a92bf;
+	border-bottom: 1px solid black;
+}
+
+#output-block h2 {
+	background-color: #00b961;
+	border-bottom: 1px solid black;
+}
+
+#block-bank {
+	display: block;
+	flex-basis: 100%;
+	height: calc(20vw);
+}
+
+.block-bank-header {
+	background-color: #979797;
+	border-bottom: 1px solid black;
+}
+
+.block {
+	display: block;
+	width: 100%;
+	height: calc(100% - 2rem - 4px);
+	padding: 8px;
+	box-sizing: border-box;
+	background-color: lightblue;
+	background-clip: content-box;
+	border-radius: 32px;
+	text-align: center;
+	font-size: 8rem;
+	font-weight: bold;
+}
+
+.block[type="operator"] {
+	background-color: lightcoral;
+}
+
+.block[type="output"] {
+	background-color: lightgreen;
+}
+
+.block:hover {
+	filter: brightness(85%);
+}
+
+#block-bank .block {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 24.7%;
+}
