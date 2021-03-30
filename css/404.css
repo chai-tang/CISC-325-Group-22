@@ -1,0 +1,50 @@
+/*
+
+CSS specifically for the 404 error page
+
+*/
+
+html {
+    height: 100%;
+}
+
+body {
+	margin: 0px;
+	font-size: 1rem;
+	font-family: Helvetica, sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    width:100%;
+    height:100%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-style: normal;
+    padding: 12px;
+    background-color: rgb(126, 191, 212);
+    border-radius: 16px;
+    margin-bottom: 0;
+}
+
+p {
+    padding: 16px;
+    font-size: 1.5rem;
+}
+
+a {
+    padding:16px;
+    background-color: lightblue;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color:black;
+    border-radius: 16px;
+    border: 1px solid black;
+}
+
+a:hover {
+    background-color: rgb(147, 182, 194);
+}

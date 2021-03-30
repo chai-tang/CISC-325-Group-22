@@ -9,6 +9,7 @@ body {
 	margin: 0px;
 	font-size: 1rem;
 	font-family: Helvetica, sans-serif;
+	background-color: azure;
 }
 
 body .main {
@@ -101,10 +102,10 @@ tr {
 }
 
 tr:nth-child(even) {
-	background: #ccc;
+	background: rgb(169, 180, 180);
 }
 tr:nth-child(odd) {
-	background: #fff;
+	background: azure;
 }
 tr:not(.table-header):hover {
 	background: lightblue;
