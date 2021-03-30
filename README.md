@@ -18,6 +18,13 @@ Teacher Homepage
 - Individual projects can be selected from the table. For this prototype, they will all redirect to the same demo project.
 - New projects can be added with the "New Project" button, updating the table instantly. However they will disappear upon page refresh because this prototype does not have backend database functionality.
 
+Teacher Project Page
+
+- Users can add and remove custom input and operator blocks.
+- Users can create and delete new custom rules for output blocks
+- Rule creation menu updates in real time as users create and delete blocks
+- The "Preview as Student" button shows the user what this project will look like to students. Currently it just redirects to the student project demo page because we don't have a backend to handle this functionality properly.
+
 Student Homepage
 
 - Similar menu navigation features as the teacher homepage, although with slightly different options for students specifically.
@@ -33,7 +40,3 @@ Known Issues:
 - Block bank CSS can't fit more than four blocks at once
 - Block text isn't vertically centered
 - Most of the CSS is really ugly because josh made it
-
-# Planned Functionality:
-
-Teacher Project Page

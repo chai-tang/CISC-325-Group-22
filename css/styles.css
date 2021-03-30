@@ -67,6 +67,7 @@ header nav ul li a {
 	border-radius: 4px;
 	text-align: center;
 	color: black;
+	border: 1px solid black;
 }
 
 header nav ul li a:hover {
@@ -81,7 +82,7 @@ header #logo {
 }
 
 /*
-Teacher Homepage Content CSS
+Teacher & Student Homepage CSS
 */
 
 #projects {
@@ -144,6 +145,14 @@ form {
 	padding: 4px;
 	width: 100%;
 	display: block;
+}
+
+#new-project:hover, .create:hover{
+	background-color: rgb(57, 187, 53);
+}
+
+.cancel:hover{
+	background-color: rgb(194, 60, 60);
 }
 
 .create {
@@ -286,4 +295,176 @@ form {
 	display: inline-block;
 	box-sizing: border-box;
 	width: 24.7%;
+}
+
+/*
+
+Teacher Project Page CSS
+
+*/
+
+.project-editor{
+	display: flex;
+	flex-direction: row;
+	border: 2px solid black;
+	border-right: 1px solid black;
+}
+
+.project-editor div{
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid black;
+}
+
+.inputs {
+	width: 25%;
+}
+.operators {
+	width: 25%;
+}
+.outputs {
+	width: 50%;
+}
+
+.project-editor div ul {
+	padding:0;
+	margin:16px;
+	list-style: none;
+}
+
+.project-editor div ul li {
+	padding:32px 8px 32px 8px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	border-radius: 8px;
+	border: 1px solid black;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.inputs li {
+	background-color: lightblue;
+}
+
+.operators li {
+	background-color: lightcoral;
+}
+
+.outputs li {
+	background-color: rgb(223, 223, 223);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.outputs li div {
+	padding: 8px 16px 8px 16px;
+	margin-right:8px;
+	text-align: center;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+.outputs .input-block{
+	background-color: lightblue;
+}
+
+.outputs .operator-block{
+	background-color: lightcoral;
+}
+
+.outputs .output-block{
+	background-color: lightgreen;
+}
+
+.editor-header{
+	text-align: center;
+	font-size: 1.5rem;
+	background-color:#b1b1b1;
+	padding:16px;
+	border-bottom: 1px solid black;
+}
+
+.project-editor div button{
+	margin: 16px 50% 16px 16px;
+	padding: 8px;
+	background-color: rgb(73, 238, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+	max-width: 150px;
+}
+
+.project-editor div button:hover{
+	background-color: rgb(57, 187, 53);
+}
+
+.preview {
+	margin-top: 32px;
+	float: left;
+	padding: 16px 32px 16px 32px;
+	border-radius: 8px;
+	background-color: rgb(108, 201, 231);
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+}
+
+.preview:hover{
+	background-color: #2a92bf;
+}
+
+#new-input, #new-operator, #new-rule{
+	width: 90%;
+	box-sizing: border-box;
+	margin:16px;
+	margin-top: 0;
+	display: none;
+}
+
+#new-input div , #new-operator div, #new-rule div{
+	border: none;
+}
+
+#new-input .create:hover, #new-operator .create:hover, #new-rule .create:hover{
+	background-color: rgb(57, 187, 53);
+}
+
+#new-input .cancel:hover, #new-operator .cancel:hover, #new-rule .cancel:hover{
+	background-color: rgb(194, 60, 60);
+}
+
+#new-input .create, #new-operator .create, #new-rule .create{
+	padding: 8px;
+	background-color: rgb(73, 238, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+	margin: 0px 32px 0px 0px;
+	min-width: 100px;
+}
+#new-input .cancel, #new-operator .cancel, #new-rule .cancel{
+	padding: 8px;
+	background-color: rgb(238, 67, 67);
+	border: 1px solid gray;
+	border-radius: 4px;
+	margin: 0;
+	min-width: 100px;
+}
+
+.project-editor div ul li .delete {
+	background-color: #ff0d05;
+	color: black;
+	width: 25px;
+	height: 25px;
+	margin:0;
+	padding:0;
+	text-align: center;
+	float: right;
+	transform: translate(25%,-125%);
+}
+
+.project-editor div ul li .delete:hover{
+	background-color: #ac0600;
 }

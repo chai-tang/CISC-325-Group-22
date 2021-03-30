@@ -10,11 +10,112 @@
 
     <link rel="shortcut icon" href="media/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js"></script>
+    <script src="js/teacher-project.js"></script>
 </head>
 
 <body>
-    Teacher Project DEMO Page - WIP
+    <header>
+        <div class="site-title"> 
+            Block by Block 
+            <img id="logo" src="media/blocklogo.png" alt="Colourful block logo"/>
+        </div>
+        
+        <div class="subtitle">New Teaching Tool</div>
+
+        <nav>
+            <ul>
+                <li><a href="teacher-home.html">Home</a></li>
+                <li><a href="pagenotfound.html">Classes</a></li>
+                <li><a href="pagenotfound.html">Account</a></li>
+                <li><a href="pagenotfound.html">Help</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <h1>Project: Arithmetic (Grade 1 / Math / 2021-02-21)</h1>
+        
+        <section class="project-editor">
+            <div class="inputs">
+                <span class="editor-header">Input Blocks</span>
+                <ul>
+                    <li>7 <button class="delete">X</button></li>
+                    <li>5 <button class="delete">X</button></li>
+                    <li>3 <button class="delete">X</button></li>
+                </ul>
+                <button id="show-input-menu">Create New Block</button>
+                <form id="new-input" name="new-input">
+                    <div><label>Label </label><input type="text" name="Label"></input></div><br/>
+                    <div><label>Value </label><input type="text" name="Value"></input></div><br/>
+                    <button type="button" class="create">Add</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </form>
+            </div>
+            <div class="operators">
+                <span class="editor-header">Operator Blocks</span>
+                <ul>
+                    <li>+ <button class="delete">X</button></li>
+                    <li>- <button class="delete">X</button></li>
+                </ul>
+                <button id="show-operator-menu">Create New Block</button>
+                <form id="new-operator" name="new-operator">
+                    <div><label>Label </label><input type="text" name="Label"></input></div><br/>
+                    <div><label>Value </label><input type="text" name="Value"></input></div><br/>
+                    <button type="button" class="create"> Add </button>
+                    <button type="button" class="cancel"> Cancel </button>
+                </form>
+            </div>
+            <div class="outputs">
+                <span class="editor-header">Output Blocks</span>
+                <ul>
+                    <li>
+                        <div class="input-block">ANY</div>
+                        <div class="operator-block">+</div>
+                        <div class="input-block">ANY</div>
+                        <div>Outputs:</div>
+                        <div class="output-block">Math(input1 + input2)</div>
+                        <button class="delete">X</button>
+                    </li>
+                    <li>
+                        <div class="input-block">ANY</div>
+                        <div class="operator-block">-</div>
+                        <div class="input-block">ANY</div>
+                        <div>Outputs:</div>
+                        <div class="output-block">Math(input1 - input2)</div>
+                        <button class="delete">X</button>
+                    </li>
+                </ul>
+                <button id="show-rule-menu">Create Rule</button>
+                <form id="new-rule" name="new-rule">
+                    <div><label>Input1 </label><select id="in1">
+                        <option>ANY</option>
+                        <option>7</option>
+                        <option>5</option>
+                        <option>3</option>
+                    </select></div><br/>
+                    <div><label>Operator </label><select id="op">
+                        <option>ANY</option>
+                        <option>+</option>
+                        <option>-</option>
+                    </select></div><br/>
+                    <div><label>Input2 </label><select id="in2">
+                        <option>ANY</option>
+                        <option>7</option>
+                        <option>5</option>
+                        <option>3</option>
+                    </select></div><br/>
+                    <div><label>Output </label><input type="text" name="out"></input></div><br/>
+                    <button type="button" class="create"> Add </button>
+                    <button type="button" class="cancel"> Cancel </button>
+                </form>
+            </div>
+        </section>
+
+        <a class="preview" href="student-project.html">Preview as Student</a>
+
+    </div>
 </body>
 
 </html>
