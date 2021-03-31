@@ -166,7 +166,7 @@ function updateRuleMenu(){
     const in1 = document.getElementById("in1");
     const in2 = document.getElementById("in2");
     [in1,in2].forEach((elem) => {
-        elem.innerHTML = "";
+        elem.innerHTML = "<option>ANY</option>";
         let items = inputBlocks.children;
         for (i=0; i<items.length; i++){
             let str = "<option>";
@@ -178,7 +178,7 @@ function updateRuleMenu(){
 
     // update the op form with all the operatorBlocks
     const op = document.getElementById("op");
-    op.innerHTML = "";
+    op.innerHTML = "<option>ANY</option>";
     let items = operatorBlocks.children;
     for (i=0; i<items.length; i++){
         let str = "<option>";
