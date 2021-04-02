@@ -170,6 +170,21 @@ form {
 	border-radius: 4px;
 }
 
+.filter-buttons button {
+	width: 6rem;
+	height: 2rem;
+	padding: 6px;
+	text-align: center;
+	background-color: #37b1e6;
+	border: 1px solid black;
+	border-radius: 8px;
+	margin: 0px 8px 0px 8px;
+}
+
+.filter-buttons button:hover {
+	background-color: #2a92bf;
+}
+
 /* Student Project Page CSS */
 
 .student-block-header {
