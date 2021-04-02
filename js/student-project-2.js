@@ -11,8 +11,8 @@ function makeBlocksDragable() {
 
 	// When a block is picked up, set global data variables to its values.
 	for (i = 0; i < blocks.length; i++) {
-        // Also set its background colour
-        blocks[i].style.backgroundColor = "rgb"+blocks[i].getAttribute("value");
+		// Also set its background colour
+		blocks[i].style.backgroundColor = "rgb" + blocks[i].getAttribute("value");
 
 		blocks[i].addEventListener("dragstart", function (event) {
 			//event.preventDefault();
@@ -68,7 +68,7 @@ function updateOutputBlock() {
 	const input2 = document.getElementById("input-block-2").children[1];
 	const opBlock = document.getElementById("operator-block").children[1];
 
-    let rgb = [0,0,0];
+	let rgb = [0, 0, 0];
 
 	// if all blocks are present
 	if (input1 && input2 && opBlock && outBlock) {
@@ -77,21 +77,21 @@ function updateOutputBlock() {
 		const in2 = input2.getAttribute("value");
 		const op = opBlock.getAttribute("value");
 
-        // get colours
-        let rgb1 = in1.replace("(","").replace(")","").split(",");
-        let rgb2 = in2.replace("(","").replace(")","").split(",");
+		// get colours
+		let rgb1 = in1.replace("(", "").replace(")", "").split(",");
+		let rgb2 = in2.replace("(", "").replace(")", "").split(",");
 
-        // add colours together, with max and min of 255 and 0 for each colour
-        for (i=0; i<3;i++){
-            rgb[i] = calculateResult(rgb1[i],rgb2[i],op);
-            if (rgb[i] > 255) rgb[i] = 255;
-            else if (rgb[i] < 0) rgb[i] = 0;
-        }
+		// add colours together, with max and min of 255 and 0 for each colour
+		for (i = 0; i < 3; i++) {
+			rgb[i] = calculateResult(rgb1[i], rgb2[i], op);
+			if (rgb[i] > 255) rgb[i] = 255;
+			else if (rgb[i] < 0) rgb[i] = 0;
+		}
 
 		//result = calculateResult(parseInt(in1), parseInt(in2), op);
 	}
 
-	outBlock.style.backgroundColor = "rgb("+rgb.join()+")";
+	outBlock.style.backgroundColor = "rgb(" + rgb.join() + ")";
 	outBlock.setAttribute("value", rgb);
 }
 
@@ -146,8 +146,8 @@ function dropBlock(event) {
 	newBlock.setAttribute("value", value);
 	newBlock.setAttribute("type", type);
 	newBlock.setAttribute("draggable", true);
-    // Include the new background colour
-    newBlock.style.backgroundColor = "rgb"+value;
+	// Include the new background colour
+	newBlock.style.backgroundColor = "rgb" + value;
 	// append it to the target
 	target.appendChild(newBlock);
 	// make it dragable
