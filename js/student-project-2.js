@@ -12,7 +12,7 @@ function makeBlocksDragable() {
 	// When a block is picked up, set global data variables to its values.
 	for (i = 0; i < blocks.length; i++) {
 		// Also set its background colour
-		blocks[i].style.backgroundColor = "rgb" + blocks[i].getAttribute("value");
+		blocks[i].style.backgroundColor = getColorFromName(blocks[i].getAttribute("value"));
 
 		blocks[i].addEventListener("dragstart", function (event) {
 			//event.preventDefault();
@@ -59,6 +59,34 @@ function calculateResult(in1, in2, op) {
 	}
 }
 
+function getColorFromName(name) {
+	switch (name) {
+		case "red":
+			return "rgb(255, 0, 0)";
+		case "yellow":
+			return "rgb(255, 255, 0)";
+		case "blue":
+			return "rgb(0, 0, 255)";
+		case "purple":
+			return "rgb(128, 0, 128)";
+		case "green":
+			return "rgb(0, 128, 41)";
+		case "orange":
+			return "rgb(240, 153, 48)";
+		case "black":
+			return "rgb(0, 0, 0)";
+		default:
+			return null;
+	}
+}
+
+function combineColors(color1, color2) {
+	if ((color1 === "red" && color2 === "yellow") || (color1 === "yellow" && color2 === "red")) return "orange";
+	if ((color1 === "red" && color2 === "blue") || (color1 === "blue" && color2 === "red")) return "purple";
+	if ((color1 === "blue" && color2 === "yellow") || (color1 === "yellow" && color2 === "blue")) return "green";
+	return null;
+}
+
 // Updates the value in the output block based on the values in the inputs/operator
 // Right now it's hard coded to only to basic math because this turned out to be a lot more work than expected
 function updateOutputBlock() {
@@ -68,7 +96,7 @@ function updateOutputBlock() {
 	const input2 = document.getElementById("input-block-2").children[1];
 	const opBlock = document.getElementById("operator-block").children[1];
 
-	let rgb = [0, 0, 0];
+	let result = "black";
 
 	// if all blocks are present
 	if (input1 && input2 && opBlock && outBlock) {
@@ -77,22 +105,11 @@ function updateOutputBlock() {
 		const in2 = input2.getAttribute("value");
 		const op = opBlock.getAttribute("value");
 
-		// get colours
-		let rgb1 = in1.replace("(", "").replace(")", "").split(",");
-		let rgb2 = in2.replace("(", "").replace(")", "").split(",");
-
-		// add colours together, with max and min of 255 and 0 for each colour
-		for (i = 0; i < 3; i++) {
-			rgb[i] = calculateResult(rgb1[i], rgb2[i], op);
-			if (rgb[i] > 255) rgb[i] = 255;
-			else if (rgb[i] < 0) rgb[i] = 0;
-		}
-
-		//result = calculateResult(parseInt(in1), parseInt(in2), op);
+		result = combineColors(in1, in2);
 	}
 
-	outBlock.style.backgroundColor = "rgb(" + rgb.join() + ")";
-	outBlock.setAttribute("value", rgb);
+	outBlock.style.backgroundColor = getColorFromName(result);
+	outBlock.setAttribute("value", result);
 }
 
 // adds a block to the given event target
@@ -147,7 +164,7 @@ function dropBlock(event) {
 	newBlock.setAttribute("type", type);
 	newBlock.setAttribute("draggable", true);
 	// Include the new background colour
-	newBlock.style.backgroundColor = "rgb" + value;
+	newBlock.style.backgroundColor = getColorFromName(value);
 	// append it to the target
 	target.appendChild(newBlock);
 	// make it dragable
