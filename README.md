@@ -39,4 +39,5 @@ Known Issues:
 
 - Block bank CSS can't fit more than four blocks at once
 - Block text isn't vertically centered
+- Most of the CSS breaks on smaller screen widths
 - Most of the CSS is really ugly because josh made it
