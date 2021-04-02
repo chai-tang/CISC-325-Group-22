@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Student Project Demo 3</title>
+		<meta name="author" content="Joshua Chai-Tang" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="media/favicon.ico" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/student-project.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<div class="site-title">
+				Block by Block
+				<img id="logo" src="media/blocklogo.png" alt="Colourful block logo" />
+			</div>
+
+			<div class="subtitle">New Teaching Tool</div>
+
+			<nav>
+				<ul>
+					<li><a href="student-home.html">Home</a></li>
+					<li><a href="pagenotfound.html">Account</a></li>
+					<li><a href="pagenotfound.html">Help</a></li>
+					<li><a href="index.html">Logout</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="student-block-header">
+				<span class="in">IN</span>
+				<span class="out">OUT</span>
+			</div>
+
+			<ul class="block-container">
+				<li id="input-block-1">
+					<h2>Input 1</h2>
+				</li>
+
+				<li id="operator-block">
+					<h2>Operator</h2>
+					<div class="block" type="operator" value="+" draggable="true">+</div>
+				</li>
+
+				<li id="input-block-2">
+					<h2>Input 2</h2>
+				</li>
+
+				<li id="output-block">
+					<h2>Output</h2>
+					<div class="block" type="output" value="None" draggable="true"></div>
+				</li>
+
+				<li id="block-bank" value="3">
+					<h2 class="block-bank-header">Block Bank</h2>
+					<div class="block" type="input" value="7" draggable="true">7</div>
+					<div class="block" type="input" value="5" draggable="true">5</div>
+					<div class="block" type="input" value="1" draggable="true">1</div>
+                    <div class="block" type="operator" value="x" draggable="true">x</div>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>

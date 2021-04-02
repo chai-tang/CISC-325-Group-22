@@ -51,6 +51,10 @@ function calculateResult(in1, in2, op) {
 			return in1 + in2;
 		case "-":
 			return in1 - in2;
+		case "x":
+			return in1 * in2;
+		case "/":
+			return in1 / in2;
 		default:
 			return null;
 	}
