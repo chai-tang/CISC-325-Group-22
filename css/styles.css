@@ -147,11 +147,12 @@ form {
 	display: block;
 }
 
-#new-project:hover, .create:hover{
+#new-project:hover,
+.create:hover {
 	background-color: rgb(57, 187, 53);
 }
 
-.cancel:hover{
+.cancel:hover {
 	background-color: rgb(194, 60, 60);
 }
 
@@ -266,7 +267,7 @@ form {
 }
 
 .block {
-	display: block;
+	display: flex;
 	width: 100%;
 	height: calc(100% - 2rem - 4px);
 	padding: 8px;
@@ -277,6 +278,8 @@ form {
 	text-align: center;
 	font-size: 8rem;
 	font-weight: bold;
+	align-items: center;
+	justify-content: center;
 }
 
 .block[type="operator"] {
@@ -292,7 +295,7 @@ form {
 }
 
 #block-bank .block {
-	display: inline-block;
+	display: inline-flex;
 	box-sizing: border-box;
 	width: 24.7%;
 }
@@ -303,14 +306,14 @@ Teacher Project Page CSS
 
 */
 
-.project-editor{
+.project-editor {
 	display: flex;
 	flex-direction: row;
 	border: 2px solid black;
 	border-right: 1px solid black;
 }
 
-.project-editor div{
+.project-editor div {
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -328,13 +331,13 @@ Teacher Project Page CSS
 }
 
 .project-editor div ul {
-	padding:0;
-	margin:16px;
+	padding: 0;
+	margin: 16px;
 	list-style: none;
 }
 
 .project-editor div ul li {
-	padding:32px 8px 32px 8px;
+	padding: 32px 8px 32px 8px;
 	margin-top: 8px;
 	margin-bottom: 8px;
 	border-radius: 8px;
@@ -362,33 +365,33 @@ Teacher Project Page CSS
 
 .outputs li div {
 	padding: 8px 16px 8px 16px;
-	margin-right:8px;
+	margin-right: 8px;
 	text-align: center;
 	border-radius: 8px;
 	border: 1px solid black;
 }
 
-.outputs .input-block{
+.outputs .input-block {
 	background-color: lightblue;
 }
 
-.outputs .operator-block{
+.outputs .operator-block {
 	background-color: lightcoral;
 }
 
-.outputs .output-block{
+.outputs .output-block {
 	background-color: lightgreen;
 }
 
-.editor-header{
+.editor-header {
 	text-align: center;
 	font-size: 1.5rem;
-	background-color:#b1b1b1;
-	padding:16px;
+	background-color: #b1b1b1;
+	padding: 16px;
 	border-bottom: 1px solid black;
 }
 
-.project-editor div button{
+.project-editor div button {
 	margin: 16px 50% 16px 16px;
 	padding: 8px;
 	background-color: rgb(73, 238, 67);
@@ -397,7 +400,7 @@ Teacher Project Page CSS
 	max-width: 150px;
 }
 
-.project-editor div button:hover{
+.project-editor div button:hover {
 	background-color: rgb(57, 187, 53);
 }
 
@@ -412,31 +415,41 @@ Teacher Project Page CSS
 	border: 1px solid black;
 }
 
-.preview:hover{
+.preview:hover {
 	background-color: #2a92bf;
 }
 
-#new-input, #new-operator, #new-rule{
+#new-input,
+#new-operator,
+#new-rule {
 	width: 90%;
 	box-sizing: border-box;
-	margin:16px;
+	margin: 16px;
 	margin-top: 0;
 	display: none;
 }
 
-#new-input div , #new-operator div, #new-rule div{
+#new-input div,
+#new-operator div,
+#new-rule div {
 	border: none;
 }
 
-#new-input .create:hover, #new-operator .create:hover, #new-rule .create:hover{
+#new-input .create:hover,
+#new-operator .create:hover,
+#new-rule .create:hover {
 	background-color: rgb(57, 187, 53);
 }
 
-#new-input .cancel:hover, #new-operator .cancel:hover, #new-rule .cancel:hover{
+#new-input .cancel:hover,
+#new-operator .cancel:hover,
+#new-rule .cancel:hover {
 	background-color: rgb(194, 60, 60);
 }
 
-#new-input .create, #new-operator .create, #new-rule .create{
+#new-input .create,
+#new-operator .create,
+#new-rule .create {
 	padding: 8px;
 	background-color: rgb(73, 238, 67);
 	border: 1px solid gray;
@@ -444,7 +457,9 @@ Teacher Project Page CSS
 	margin: 0px 32px 0px 0px;
 	min-width: 100px;
 }
-#new-input .cancel, #new-operator .cancel, #new-rule .cancel{
+#new-input .cancel,
+#new-operator .cancel,
+#new-rule .cancel {
 	padding: 8px;
 	background-color: rgb(238, 67, 67);
 	border: 1px solid gray;
@@ -458,13 +473,13 @@ Teacher Project Page CSS
 	color: black;
 	width: 25px;
 	height: 25px;
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	text-align: center;
 	float: right;
-	transform: translate(25%,-125%);
+	transform: translate(25%, -125%);
 }
 
-.project-editor div ul li .delete:hover{
+.project-editor div ul li .delete:hover {
 	background-color: #ac0600;
 }
