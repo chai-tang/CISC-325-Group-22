@@ -38,6 +38,6 @@ Student Project Page
 Known Issues:
 
 -   Block bank CSS can't fit more than four blocks at once
--   Block text isn't vertically centered
--   Most of the CSS breaks on smaller screen widths
--   Most of the CSS is really ugly because josh made it (but we love him anyway)
+-   The block sizes should be made to adjust base on the number of blocks so that scrolling isn't necessary for larger projects.
+-   Most of the CSS breaks terribly on smaller screen widths
+-   Most of the CSS is really ugly because josh made it (but we love him anyway) (aw thanks)
