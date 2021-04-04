@@ -30,10 +30,11 @@ Student Homepage
 -   Similar menu navigation features as the teacher homepage, although with slightly different options for students specifically.
 -   Individual lessons can be selected from the table. For this prototype, they will all redirect to the same demo project.
 
-Student Project Page
+Student Project Pages
 
 -   Users can drag around blocks between the input, operator and block bank areas of the page. The output area updates automatically as blocks are moved.
--   Currently only has support for very basic math operations using some demo blocks. In a full implementation, these blocks and their combination outputs would be pulled from a database of projects created by a teacher user.
+-   Currently only has support for specific block combinations using demo blocks. In a full implementation, these blocks and their combination outputs would be pulled from a database of projects created by a teacher user.
+-   Three demo pages; #1 does simple integer addition and subtraction, #2 does colour mixing, #3 does addition and multiplication.
 
 Known Issues:
 
